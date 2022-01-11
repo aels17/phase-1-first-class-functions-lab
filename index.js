@@ -1,11 +1,11 @@
-const drivers = ['Antonia', 'Nuru', 'Amari', 'Mo']
+//const drivers = ['Antonia', 'Nuru', 'Amari', 'Mo']
 
-const returnFirstTwoDrivers = function() {
+const returnFirstTwoDrivers = function(drivers) {
 
 return [...drivers].splice(0,2);
 }
 
-const returnLastTwoDrivers = function() {
+const returnLastTwoDrivers = function(drivers) {
 
     return [...drivers].splice(2,2);
     }
@@ -28,12 +28,19 @@ const fareTripler = function(fare) {
     return (fare * 3);
 }
 
-function selectDifferentDrivers(drivers, selection) {
-if (selection === returnFirstTwoDrivers){
-drivers = ['Antonia', 'Nuru']
-return drivers
-}
-else
-drivers = ['Amari', 'Mo']
-return drivers
+function selectDifferentDrivers(drivers, func) {
+
+console.log("DRIVERS", drivers)
+console.log("FUNC", func);
+  return func(drivers)
+
+
+//if (selection === returnFirstTwoDrivers){
+//drivers = ['Antonia', 'Nuru']
+//return drivers
+//}
+//else
+//drivers = ['Amari', 'Mo']
+//return drivers
+//}
 }
